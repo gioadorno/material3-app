@@ -1,13 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon';
-import { MatRadioModule } from '@angular/material/radio';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import {Component, signal} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {HeaderComponent} from './header/header.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatIconModule} from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
+import {FormControl, ReactiveFormsModule} from '@angular/forms';
 
 const densityClasses = ['default', 'comfortable', 'compact', 'dense'];
 
@@ -47,12 +47,13 @@ export class AppComponent {
       route: 'profile',
       icon: 'person',
     },
+    {
+      title: 'To Do',
+      route: 'shopping-list',
+      icon: 'shopping',
+    },
   ]);
   densities = signal<Array<any>>([
-    {
-      title: 'Retirement',
-      value: 1,
-    },
     {
       title: 'Default',
       value: 0,

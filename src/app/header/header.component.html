@@ -5,9 +5,9 @@
     <div class="spacer"> </div>
     <div>
       @for (item of menuItems(); track $index) {
-      <button color="accent" mat-button>{{item}}</button>
+      <button mat-button class="primary-btn">{{item}}</button>
       }
-      <button color="primary" mat-icon-button (click)="darkMode.set(!darkMode())">
+      <button class="primary-btn" mat-icon-button (click)="darkMode.set(!darkMode())">
         @if(darkMode()) {
         <mat-icon>light_mode</mat-icon>
         } @else {

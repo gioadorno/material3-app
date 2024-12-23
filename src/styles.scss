@@ -14,8 +14,6 @@ body {
 $custom-theme: mat.define-theme((color: (use-system-variables: true), typography: (use-system-variables: true,
       ), ));
 
-@include mat.core();
-@include mat.color-variants-backwards-compatibility($custom-theme);
 
 html {
   --mat-sys-primary: rgb(29 101 134);
@@ -67,6 +65,10 @@ html {
   --mat-sys-surface-container: rgb(235 238 243);
   --mat-sys-surface-container-high: rgb(229 232 237);
   --mat-sys-surface-container-highest: rgb(223 227 231);
+
+  button.primary-btn {
+    color: var(--mat-sys-primary)
+  }
 
 }
 
@@ -122,24 +124,56 @@ html {
   --mat-sys-surface-container-high: rgb(38 43 46);
   --mat-sys-surface-container-highest: rgb(49 53 57);
 
-}
+  button.primary-btn {
+    color: var(--mat-sys-primary)
+  }
 
-.retirement {
-  @include mat.all-component-densities(1);
 }
 
 .default {
   @include mat.all-component-densities(0);
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  div.cdk-drag {
+    padding: 20px 10px;
+  }
 }
 
 .comfortable {
   @include mat.all-component-densities(-1);
+
+  h2 {
+    font-size: 1.35em;
+  }
+
+  div.cdk-drag {
+    padding: 16px 8px;
+  }
 }
 
 .compact {
   @include mat.all-component-densities(-2);
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  div.cdk-drag {
+    padding: 12px 6px;
+  }
 }
 
 .dense {
   @include mat.all-component-densities(-3);
+
+  h2 {
+    font-size: 1.05em;
+  }
+
+  div.cdk-drag {
+    padding: 8px 4px;
+  }
 }
